@@ -13,6 +13,7 @@ class BakeryStore {
   fetchBakeries = async () => {
     try {
       const response = await instance.get("/bakeries");
+      console.log(response.body);
       this.bakeries = response.data;
       this.loading = false;
     } catch (error) {
@@ -20,18 +21,18 @@ class BakeryStore {
     }
   };
 
-  bakeryCreate = async (newBakery) => {
-    try {
-      const formData = new FormData();
-      for (const key in newBakery) formData.append(key, newBakery[key]);
+  // bakeryCreate = async (newBakery) => {
+  //   try {
+  //     const formData = new FormData();
+  //     for (const key in newBakery) formData.append(key, newBakery[key]);
 
-      const response = await instance.post("/bakeries", formData);
-      response.data.cookies = [];
-      this.bakeries.push(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  //     const response = await instance.post("/bakeries", formData);
+  //     response.data.cookies = [];
+  //     this.bakeries.push(response.data);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 }
 
 const bakeryStore = new BakeryStore();

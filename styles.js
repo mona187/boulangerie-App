@@ -6,7 +6,6 @@ export const HomeBackground = styled.ImageBackground`
   height: 100%;
   justify-content: center; */
   width: 100%;
-  height: undefined;
   aspect-ratio: 1;
 `;
 

@@ -10,7 +10,7 @@ import {
   Title,
 } from "../styles";
 
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <HomeBackground
       source={{
@@ -22,7 +22,7 @@ const Home = () => {
           <Title>BAKE AND STAY AWAKE</Title>
         </TopStyling>
         <BottomStyling>
-          <ButtonStyling onPress={() => alert("Take me to the bakeries")}>
+          <ButtonStyling onPress={() => navigation.navigate("BakeryList")}>
             Swipe to continue
           </ButtonStyling>
         </BottomStyling>
