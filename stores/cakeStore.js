@@ -12,7 +12,7 @@ class CakeStore {
   fetchCakes = async () => {
     try {
       const response = await instance.get("/cakes");
-      this.cake = response.data;
+      this.cakes = response.data;
       this.loading = false;
     } catch (error) {
       console.error("fetchCake: ", error);

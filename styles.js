@@ -5,8 +5,8 @@ export const HomeBackground = styled.ImageBackground`
   /* width: 50%;
   height: 100%;
   justify-content: center; */
+  height: 100%;
   width: 100%;
-  aspect-ratio: 1;
 `;
 
 export const OverLayContainter = styled.View`

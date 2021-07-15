@@ -44,7 +44,7 @@ export default RootNavigator = () => {
             title: bakery.name,
           };
         }}
-      ></Stack.Screen>
+      />
     </Stack.Navigator>
   );
 };

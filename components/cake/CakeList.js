@@ -1,15 +1,15 @@
 import React from "react";
 
 import { List, Spinner } from "native-base";
-
+import { observer } from "mobx-react";
 import CakeItem from "./CakeItem";
 
 import { ListWrapper } from "./styles";
 import cakeStore from "../../stores/cakeStore";
 
-const CakeList = ({ cake }) => {
+const CakeList = ({ cakes }) => {
   if (cakeStore.loading) return <Spinner />;
-  const cakeList = cake.map((cake) => <CakeItem cake={cake} key={cake.id} />);
+  const cakeList = cakes.map((cake) => <CakeItem cake={cake} key={cake.id} />);
   return (
     <ListWrapper>
       <List>{cakeList}</List>
@@ -17,4 +17,4 @@ const CakeList = ({ cake }) => {
   );
 };
 
-export default CakeList;
+export default observer(CakeList);

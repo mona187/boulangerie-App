@@ -18,12 +18,13 @@ import {
 //native-base
 import { Spinner } from "native-base";
 
-const BakeryDetail = ({ navigation, route }) => {
+BakeryDetail = ({ navigation, route }) => {
   const { bakery } = route.params;
 
-  if (bakeryStore.loading) return <Spinner />;
-
+  if (bakeryStore.loading || cakeStore.loading) return <Spinner />;
+  console.log(bakery.cakes);
   const cakes = bakery.cakes.map((cake) => cakeStore.getCakeById(cake.id));
+  console.log(cakes);
   return (
     <>
       <BakeryDetailWrapper>
