@@ -1,5 +1,5 @@
 import React from "react";
-
+// import slide from "./Slide";
 //styles
 import {
   HomeBackground,
@@ -14,12 +14,12 @@ const Home = ({ navigation }) => {
   return (
     <HomeBackground
       source={{
-        uri: "https://oxitamins.com/wp-content/uploads/2021/04/somers_bakery-department-header.jpg",
+        uri: "https://i.pinimg.com/236x/88/9f/0a/889f0ac220dc834b373c9e958041ae30--the-bakery-bakery-cafe.jpg",
       }}
     >
       <OverLayContainter>
         <TopStyling>
-          <Title>BAKE AND STAY AWAKE</Title>
+          <Title>Bake and stay awake</Title>
         </TopStyling>
         <BottomStyling>
           <ButtonStyling onPress={() => navigation.navigate("BakeryList")}>

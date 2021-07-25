@@ -1,14 +1,15 @@
 import styled from "styled-components/native";
 
+// export const HomeBackground = styled.ImageBackground`
+//   width: 100%;
+//   aspect-ratio: 1;
+// `;
 export const HomeBackground = styled.ImageBackground`
-  /* flex: 1; */
-  /* width: 50%;
-  height: 100%;
-  justify-content: center; */
-  height: 100%;
+  flex: 1;
   width: 100%;
+  height: 100%;
+  transform: scale(0.9);
 `;
-
 export const OverLayContainter = styled.View`
   flex: 1;
   background-color: rgba(100, 40, 60, 0.3);
@@ -22,8 +23,9 @@ export const TopStyling = styled.View`
 
 export const Title = styled.Text`
   color: #fff;
-  font-size: 38px;
+  font-size: 50px;
   text-align: center;
+  font-weight: bold;
 `;
 
 export const BottomStyling = styled.View`
