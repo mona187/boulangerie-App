@@ -1,5 +1,5 @@
 import React from "react";
-// import slide from "./Slide";
+import Slide from "./Slide";
 //styles
 import {
   HomeBackground,
@@ -14,7 +14,7 @@ const Home = ({ navigation }) => {
   return (
     <HomeBackground
       source={{
-        uri: "https://i.pinimg.com/236x/88/9f/0a/889f0ac220dc834b373c9e958041ae30--the-bakery-bakery-cafe.jpg",
+        uri: "https://www.mashed.com/img/gallery/the-best-bakery-in-every-state/intro-1601499029.jpg",
       }}
     >
       <OverLayContainter>
@@ -23,7 +23,7 @@ const Home = ({ navigation }) => {
         </TopStyling>
         <BottomStyling>
           <ButtonStyling onPress={() => navigation.navigate("BakeryList")}>
-            Swipe to continue
+            Click to continue
           </ButtonStyling>
         </BottomStyling>
       </OverLayContainter>

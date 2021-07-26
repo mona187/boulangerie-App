@@ -12,3 +12,7 @@ export const CartButtonStyled = styled(FontAwesome)`
   color: ${(props) => props.theme.white};
   margin-right: 10px;
 `;
+export const CartTextStyled = styled.Text`
+  color: ${(props) => props.theme.white};
+  font-size: 20px;
+`;

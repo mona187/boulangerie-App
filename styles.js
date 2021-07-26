@@ -8,7 +8,7 @@ export const HomeBackground = styled.ImageBackground`
   flex: 1;
   width: 100%;
   height: 100%;
-  transform: scale(0.9);
+  /* transform: scale(0.9); */
 `;
 export const OverLayContainter = styled.View`
   flex: 1;

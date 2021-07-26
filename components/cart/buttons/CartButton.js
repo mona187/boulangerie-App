@@ -1,17 +1,26 @@
 import React from "react";
 
 import { useNavigation } from "@react-navigation/native";
-import { CartButtonStyled } from "../styles";
 
+//styles
+import { CartButtonStyled, CartTextStyled } from "../styles";
+
+//store
+import cartStore from "../../../stores/cartStore";
+
+//native-base
+import { Button } from "native-base";
+
+//observer
+import { observer } from "mobx-react";
 const CartButton = () => {
   const navigation = useNavigation();
   return (
-    <CartButtonStyled
-      name="shopping-cart"
-      size={24}
-      onPress={() => navigation.navigate("CartList")}
-    />
+    <Button onPress={() => navigation.navigate("CartList")}>
+      <CartButtonStyled name="shopping-cart" size={24} />
+      <CartTextStyled>{cartStore.totalQuantity}</CartTextStyled>
+    </Button>
   );
 };
 
-export default CartButton;
+export default observer(CartButton);
