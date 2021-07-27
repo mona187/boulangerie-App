@@ -38,3 +38,19 @@ export const ButtonStyling = styled.Text`
   color: ${(props) => props.theme.backgroundColor};
   font-size: 22px;
 `;
+export const ButtonTime = styled.View`
+  width: 165px;
+  height: 35px;
+  border-radius: 4px;
+  background: #ffc0cb;
+
+  color: ${(props) => props.theme.black};
+  border: 0px transparent;
+  text-align: center;
+  margin: 5px;
+
+  &:hover {
+    background: #3b5998;
+    opacity: 0.6;
+  }
+`;

@@ -1,5 +1,6 @@
 import React from "react";
-
+import authStore from "../stores/authStore";
+import Signpage from "../components/authentication/Signpage";
 //styles
 import {
   HomeBackground,
@@ -10,7 +11,7 @@ import {
   Title,
 } from "../styles";
 
-const Home = ({ navigation }) => {
+const Home = () => {
   return (
     <HomeBackground
       source={{
@@ -19,12 +20,17 @@ const Home = ({ navigation }) => {
     >
       <OverLayContainter>
         <TopStyling>
+          <ButtonStyling onPress={() => authStore.signout()}>
+            signout
+          </ButtonStyling>
+
           <Title>Bake and stay awake</Title>
         </TopStyling>
         <BottomStyling>
-          <ButtonStyling onPress={() => navigation.navigate("BakeryList")}>
+          {/* <ButtonStyling onPress={() => navigation.navigate("Signin")}>
             Click to continue
-          </ButtonStyling>
+          </ButtonStyling> */}
+          <Signpage />
         </BottomStyling>
       </OverLayContainter>
     </HomeBackground>

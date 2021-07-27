@@ -17,6 +17,7 @@ const theme = {
   red: "red",
   white: "#fff",
   blue: "#90d4ed",
+  black: "#000000",
 };
 export default function App() {
   return (
